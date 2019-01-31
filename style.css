@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+  canvas {
+    background-image: "bgimg.png";
+    width: 1069;
+    height: 500;
+  }
+
+
+  #logo{
+    background-color: #27ae60;
+  }
+  
+  #container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  #header{
+    background-color: black;
+    color: white;
+    opacity: 0.9;
+    height: 10vh;
+    width: 100%;
+    font-family: 'Press Start 2P';
+    font-size: 6em;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+  #main{
+    display: flex;
+    background-color: white;
+    height: 70%;
+    width: 100%;
+  }
+  
+  #story{
+    background-color: white;
+    border: 1px solid white; 
+    opacity: 0.9;
+    color: black;
+    width: 23%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  #instructions{
+    background-color: white;
+    border: 1px solid white;
+    opacity: 0.9;
+    color: black;
+    width: 21%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  
+  #footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    background-color: black;
+    border: 1px solid white;
+    opacity: 0.8;
+    color: black;
+    height: 20vh;
+    width: 100%;
+  }
+  
+  #info{
+    font-size: 1.3em;
+    color: white;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  #buttons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    font-size: 
+  }
+  
+  button {
+    margin: 10%;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .animate
+  {
+      transition: all 0.1s;
+      -webkit-transition: all 0.1s;
+  }
+  
+  .action-button
+  {
+      position: relative;
+      padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    float: left;
+      border-radius: 3px;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      color: #FFF;
+      text-decoration: none;	
+  }
+  
+  .blue
+  {
+      background-color: #3498db;
+      border-bottom: 5px solid #2980B9;
+      text-shadow: 0px -2px #2980B9;
+  }
+  
+  .red
+  {
+      background-color: #e74c3c;
+      border-bottom: 5px solid #c0392b;
+      text-shadow: 0px -2px #c0392b;
+  }
+  
+  .green
+  {
+      background-color: #2ecc71;
+      border-bottom: 5px solid #27ae60;
+      text-shadow: 0px -2px #27ae60;
+  }
+  
+  .yellow
+  {
+      background-color: #f1c40f;
+      border-bottom: 5px solid #f39c12;
+      text-shadow: 0px -2px #f39c12;
+  }
+  
+  .action-button:active
+  {
+      transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+      border-bottom: 1px solid;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.8s ease-in-out 0s;
+  
+    }
