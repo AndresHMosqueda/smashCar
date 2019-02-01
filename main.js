@@ -17,43 +17,44 @@ let frames = 0;
 let gameStarted = false;
 let timeLimit = 0;
 let bg = new Image();
-bg.src = "bg.jpeg";
+bg.src = "NFL-LOGO.jpg";
 
 let p1 = {
     x: 30,
     y: 465,
-    color: "blue",
+    color: "white",
     canonAngle: 0,
     velX: 0,
     velY: 0,
-    size: 24,
+    size: 15,
     img: new Image(),
     draw: function(){
-        this.img.src ='player1.png';
+        this.img.onload
+        this.img.src ='sally.png';
         ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        ctx.drawImage(this.img, this.x - 38, this.y - 25, this.size + 55, this.size + 55);
+        ctx.drawImage(this.img, this.x - 25, this.y - 25, this.size + 70, this.size + 55);
     }
 }
 
 let p2 = {
     x: width - 50,
     y: 55,
-    color: "red",
+    color: "white",
     canonAngle: 180,
     velX: 0,
     velY: 0,
-    size: 24,
+    size: 15,
     img: new Image(),
     draw: function(){
-        this.img.src ='player2.png';
+        this.img.src ='Mcqueen.png';
         ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        ctx.drawImage(this.img, this.x - 38, this.y - 25, this.size + 55, this.size + 55);
+        ctx.drawImage(this.img, this.x - 58, this.y - 45, this.size + 75, this.size + 75);
    
     }
 }
@@ -82,22 +83,23 @@ function startGame (){
     this.bgsound = new Audio()
     bgsound.src = 'http://66.90.93.122/ost/mario-kart-64/fyocpkkg/02%20Setup%20and%20Kart%20Select.mp3',
     bgsound.play()
+   
 }
-
-
 function portada() {
 
     ctx.fillStyle = "rgb(57, 117, 209)";
     ctx.font = '30px "Press Start 2P"';
-    ctx.fillText('Welcome to Smash Car 🏁' , canvas.width/2 -160, canvas.height / 2);
+    ctx.fillText('Welcome to Smash Car 🏁' , canvas.width/2 -360, canvas.height / 2);
     ctx.textAlign = "center";
     ctx.fillStyle = "rgb(57, 117, 209)";
     ctx.font = '30px "Press Start 2P"';
     ctx.fillText('Press Enter To Start! 🎬 ', canvas.width/2, canvas.height / 2 + 50);
     ctx.textAlign = "center";
     let bckimg = new Image();
-    bckimg.src = "backgroundimg.jpg";
-    ctx.drawImage(bckimg, 100, 100, 100, 100);
+    bckimg.src = "nfl.png";
+    bckimg.onload = () => {
+    ctx.drawImage(bckimg, 450, 300, 150, 150);
+    } 
 }
 
 
@@ -248,8 +250,6 @@ function mooveshoot(angle, shoot) {
         default: shootp1.x+=0;
     }
 
-    if (shoot.x > width + shoot.size) { shoot.x = width + shoot.size; }
-
 }
 
 
@@ -301,7 +301,7 @@ function point(scr) {
 
 function drawTime() {
     timeLimit = 15 + (Math.floor(frames / 60)), width / 2, 40;
-    ctx.fillStyle = "green"
+    ctx.fillStyle = "white"
     if(timeLimit <= 0){
         timeLimit = 0
     }
@@ -319,11 +319,11 @@ function drawTime() {
 }
 function drawScore() {
     
-    ctx.font = '25px "Raleway Dots", cursive';
-    ctx.fillStyle = "blue";
-    ctx.fillText("Score P1: " + shootp1.score, 105, 35, canvas.width - 65, 20);
-    ctx.fillStyle = "red";
-    ctx.fillText("Score P2: " + shootp2.score, width - 105, 30, canvas.width - 65, 20);
+    ctx.font = '25px "Raleway Dots", normal';
+    ctx.fillStyle = "orange";
+    ctx.fillText("Score Patriots: " + shootp1.score, 125, 35, canvas.width - 65, 20);
+    ctx.fillStyle = "orange";
+    ctx.fillText("Score RAMS: " + shootp2.score, width - 115, 30, canvas.width - 65, 20);
 
 
 }
@@ -365,4 +365,6 @@ function clearCanvas(){
 	ctx.clearRect(0, 0, 1069, 500);
 }
 
-window.onload = portada()
+window.onload = function() {
+    portada()
+}

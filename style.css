@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-@import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
-@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+
 
 *{
     padding: 0;
@@ -55,6 +54,7 @@
     font-family: 'Lato', sans-serif;
     font-size: 1em;
     text-align: center;
+    line-height: 2;
   }
   
   #instructions{
@@ -96,7 +96,7 @@
     justify-content: space-around;
     align-content: center;
     align-items: center;
-    font-size: 
+    
   }
   
   button {
