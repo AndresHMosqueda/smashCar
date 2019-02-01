@@ -300,7 +300,7 @@ function point(scr) {
 }
 
 function drawTime() {
-    timeLimit = 60 + (Math.floor(frames / 60)), width / 2, 40;
+    timeLimit = 50 + (Math.floor(frames / 60)), width / 2, 40;
     ctx.fillStyle = "white"
     if(timeLimit <= 0){
         timeLimit = 0
